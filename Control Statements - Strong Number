@@ -1,0 +1,59 @@
+Control Statements - Strong Number
+A number can be said as a strong number when the sum of the factorial of the individual digits is equal to the number.
+
+For example, 145 is a strong number. 1! + 4! + 5! = 145. Write a program to check whether a given number is a strong number or not.
+
+Input Format
+
+Input consists of 1 integer.
+
+Constraints
+
+NA
+
+Output Format
+
+If it is a strong number print "Yes" or print "No".
+
+Sample Input 0
+
+145
+Sample Output 0
+
+Yes
+Explanation 0
+
+= 1! + 4! +5! = 1+24+120 = 145
+
+import java.io.*;
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int result=0;int k=n;
+        while(n!=0){
+            int last=n%10;
+            n = n/10;
+            
+            result=result+fact(last);
+        }
+        if (k==result){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+    }    
+        static int fact(int val){
+            int result= 1;
+            for(int i =val;i>=2;i--){
+                result=result*i;
+                
+            }
+            return result;
+        }
+        
+}
