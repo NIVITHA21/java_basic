@@ -47,6 +47,21 @@ public class Solution {
        
     }
 }
+At the end, you print:
+
+System.out.println(p);
+
+
+👉 This means your program prints F(n−1), NOT the nth Fibonacci number.
+
+📌 If you want to print Fibonacci(n)
+
+Then your output line should be:
+
+System.out.println(q);
+
+
+And the loop should run up to i <= n
 
 
 
